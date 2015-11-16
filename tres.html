@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 3 en raya</title>
+</head>
+<body>
+
+<script  type="text/javascript">
+
+    document.write("<table width='250' height='250' border='1'><th colspan= '8' > Tres en Raya</th><tr>");
+
+
+    for(var fila = 1 ; fila < 4 ; fila++){
+
+
+        document.write("<tr>");
+
+        for(var col = 1 ; col < 4 ; col++){
+
+                document.write("<td id='"+ fila,col +"' onclick='pulsar(this)' >");
+
+        }
+    }
+
+    document.write("</table>");
+
+
+    function pulsar(id) {
+
+
+            if(id.style.backgroundColor == "black"){
+
+                id.style.backgroundColor = "red";
+            }else{
+                id.style.backgroundColor = "black";
+            }
+
+
+
+
+
+
+    }
+
+</script>
+
+</body>
+</html>
