@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title> 3 en raya</title>
@@ -25,21 +25,42 @@
 
     document.write("</table>");
 
+    var ju = 0;
+    esjugador = true;
 
     function pulsar(id) {
 
+        if (id.style.backgroundColor == "black" || id.style.backgroundColor == "red") {
 
-            if(id.style.backgroundColor == "black"){
+            alert("pulse otra casilla");
+            return;
+
+        }else{
+
+            if (esjugador == true) {
+
+                id.style.backgroundColor = "black";
+
+            } else if (esjugador == false) {
 
                 id.style.backgroundColor = "red";
-            }else{
-                id.style.backgroundColor = "black";
             }
 
+    }
+
+        cambiarjugador();
 
 
+    }
 
 
+    function cambiarjugador(){
+        ju++;
+        if (ju % 2 == 0){
+            esjugador = true;
+        }else{
+            esjugador = false;
+        }
 
     }
 
